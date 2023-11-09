@@ -57,15 +57,16 @@
         <div class="col-3 offset-md-1"><%= f.label "パスワード(確認用)" %></div>
         <div class="col-3"><%= f.password_field :password_confirmation, :size => "42" %></div>
       </div>
-  </div><br>
+
 
       <div class="row">
         <div class="col-2 offset-md-4 mt-3 mb-2"><%= f.submit "新規登録", class:"col btn btn-success" %></div>
       </div>
-    <% end %><br>
+    <% end %>
+  </div><br/>
 
   <div class="text-center">
     <h5>※既に登録済の方は、<%= link_to "こちら", new_student_session_path, class:"font-weight-bold" %>からログインしてください。</h5>
-  </div>
+  </div><br/><br/><br/>
 
 </div>

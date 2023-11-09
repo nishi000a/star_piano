@@ -23,7 +23,7 @@
         <% else %>
           <%= link_to "体験申し込みはこちら！", new_student_lesson_path(post_id: @post.id), class: "btn btn-success col" %>
         <% end %>
-      </p></br>
+      </p><br />
 
   <!--DM機能-->
       <p>
@@ -32,7 +32,7 @@
         <% else %>
         <%= link_to "DMを送る", student_rooms_path(teacher_id: params[:id]), class: "btn btn-info col", method: :post %>
         <% end %>
-      </p></br>
+      </p><br />
 
   <!--いいね機能-->
       <p>
