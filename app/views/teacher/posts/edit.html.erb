@@ -28,12 +28,11 @@
           </div>
 
           <div class="row mb-3"><%= f.label :体験申込み候補日, class:"col-md-2 offset-md-1" %></div>
-          <div class="row mb-1"><%= f.label :日程１, class:"col-md-6" %><%= f.datetime_field :lesson_1, class:"col-md-2 form-control" %></div></br>
+          <div class="row mb-1"><%= f.label :日程１, class:"col-md-6" %><%= f.datetime_field :lesson_1, class:"col-md-2 form-control" %></div><br>
           <div class="row mb-1"><%= f.label :日程２, class:"col-md-6" %><%= f.datetime_field :lesson_2 %></div><br>
           <div class="row mb-1"><%= f.label :日程３, class:"col-md-6" %><%= f.datetime_field :lesson_3 %></div><br>
           <div class="row mb-1"><%= f.label :日程４, class:"col-md-6" %><%= f.datetime_field :lesson_4 %></div><br>
           <div class="row mb-1"><%= f.label :日程５, class:"col-md-6" %><%= f.datetime_field :lesson_5 %></div><br>
-
           <%= f.submit :保存, class: "btn btn-success col" %>
         <div>
       <% end %>
