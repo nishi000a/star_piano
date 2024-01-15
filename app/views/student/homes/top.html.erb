@@ -4,7 +4,7 @@
   <div class="row">
       <% @posts.each do |post| %>
         <div class="box text-center">
-　　　　　　　<p>
+　　　　　　<p>
 　　　　　　　  <%= link_to student_post_path(post.id) do %>
               <% if post.profile_image.attached? %>
                   <%= image_tag post.profile_image, size: "200x200" %>
@@ -12,7 +12,7 @@
                   <%= image_tag 'no_image', size: "200x200" %>
               <% end %>
             <% end %>
-          </p>
+　　　　　</p>
           <p><%= post.name %></p>
           <p><%= post.introduction %></p>
         </div>
