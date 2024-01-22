@@ -1,13 +1,21 @@
 <div class="container">
 
-  <div class="row mb-5">
-    <h2 class="text-center">新着申込み一覧</h2>&emsp;
-    <p><%= link_to "一覧を開く", teacher_lessons_path, class: "btn btn-success" %></p>
-  </div>
+  <p style="text-align:center">ようこそSTAR PIANOへ！</p>
+  <p style="text-align:center">まずは投稿一覧より募集を投稿してみましょう！</p>
 
-  <div class="row mb-5">
-    <h2 class="text-center">投稿一覧</h2>&emsp;
-    <p><%= link_to "一覧を開く", teacher_posts_path, class: "btn btn-success" %></p>
-  </div>
+
+  <table class="table table-bordered">
+    <thead>
+        <tr>
+          <th  class="text-center", style="width:300px;background-color: #EEEEEE;">新着申込み一覧</th>
+          <td class="text-center"><%= link_to "一覧を開く", teacher_lessons_path, class: "btn btn-success" %></td>
+        </tr>
+
+        <tr>
+          <th  class="text-center", style="width:300px;background-color: #EEEEEE;">投稿一覧</th>
+          <td class="text-center"><%= link_to "一覧を開く", teacher_posts_path, class: "btn btn-success" %></td>
+        </tr>
+    </thead>
+  </table>
 
 </div>
