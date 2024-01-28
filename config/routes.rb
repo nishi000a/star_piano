@@ -12,6 +12,12 @@ Rails.application.routes.draw do
     registrations: "teacher/registrations",
     sessions: 'teacher/sessions'
   }
+  
+  devise_scope :teacher do
+    post 'teacher/guest_sign_in' => 'teacher/sessions#guest_sign_in'
+  end
+  
+
 
 # 生徒
   devise_for :student, controllers: {

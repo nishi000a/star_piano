@@ -8,12 +8,12 @@ class Teacher < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :posts, dependent: :destroy
 
-  validates :last_name, presence: true
-  validates :first_name, presence: true
-  validates :last_name_kana, presence: true
-  validates :first_name_kana, presence: true
-  validates :postal_code, presence: true
-  validates :address, presence: true
-  validates :telephone_number, presence: true
-  validates :email, uniqueness: true
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |teacher|
+      teacher.password = SecureRandom.urlsafe_base64
+      teacher.password_confirmation = teacher.password
+      teacher.first_name = "ゲストユーザー"
+    end
+  end
+
 end

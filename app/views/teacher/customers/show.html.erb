@@ -1,11 +1,17 @@
-<div class="container">
-
-  <h2 class= "text-center">マイページ</h2>
+<div class="container text-center">
+  <h2 class="mt-5">マイページ</h2>
 
     <div style="margin-top: 30px;">
       <div class="row">
           <h3><b>登録情報</b></h3>&emsp;
-          <p><%= link_to "編集する", edit_teacher_customers_path, class: "btn btn-success"%></p>
+
+          <p>
+            <% if @teacher.email == 'guest@example.com'%>
+              <p class="mt-1">※ゲストユーザーはユーザー情報の編集ができません。</p>
+            <% else %>
+              <%= link_to "編集する", edit_teacher_customers_path, class: "btn btn-success"%>
+            <% end %>
+          </p>
       </div>
 
       <table class="table table-bordered text-left">
